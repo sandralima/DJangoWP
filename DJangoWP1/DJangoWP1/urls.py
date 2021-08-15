@@ -23,4 +23,6 @@ Including another URLconf
 urlpatterns = [
     # Uncomment the next line to enable the admin:
     #path('admin/', admin.site.urls)
+    url(r'^$', HelloDjangoApp.views.index, name='index'), #^$: is the routing for the site root, "/".
+    url(r'^home$', HelloDjangoApp.views.index, name='home'), #^home$ specifically routes "/home"
 ]
